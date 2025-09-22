@@ -21,37 +21,23 @@ while active:
     user_input = user_input.strip(",")                                    
     # Removes all spaces, punctuation and special characters using .replace()
     num_list = user_input.split(",") # Converts string to list using .split(",")
-    print(num_list)
-    break
-    # ------------------------------------------
     # INITIALIZE STORAGE LISTS
-    # ------------------------------------------
+    evens = []
+    odds = []
+    #Result summary header
+    print("---- Result Summary ----")
+    #Sort odds and evens
+    for number in num_list:
+        num = int(number)
+        if num % 2 == 0:
+            evens.append(num)
+            print(f"{num} is even!")
+        else:
+            odds.append(num)
+            print(f"{num} is odd!")
+    break
 
-    # TODO: Create empty list called 'evens'
 
-    # TODO: Create empty list called 'odds'
-
-
-    # ------------------------------------------
-    # PROCESS EACH NUMBER
-    # ------------------------------------------
-
-    # TODO: Print "---- Result Summary ----"
-
-    # TODO: Loop through each number in num_list
-
-        # TODO: Convert string number to integer
-
-        # TODO: Check if number is even using modulo operator
-        # Hint: if number % 2 == 0, it's even
-
-            # TODO: Add number to evens list
-            # TODO: Print "[number] is even!"
-
-        # TODO: Handle odd numbers (else case)
-
-            # TODO: Add number to odds list
-            # TODO: Print "[number] is odd!"
 
 
     # ------------------------------------------
