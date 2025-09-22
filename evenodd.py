@@ -35,43 +35,31 @@ while active:
         else:
             odds.append(num)
             print(f"{num} is odd!")
-    break
-
-
-
-
-    # ------------------------------------------
     # SORT AND DISPLAY RESULTS
-    # ------------------------------------------
+    evens.sort()
+    odds.sort()
+    # Display even numbers with count
+    print(f"\nThe following {len(evens)} numbers are even:")
+    for even in evens:
+        print(even)
 
-    # TODO: Sort the evens list numerically
-
-    # TODO: Sort the odds list numerically
-
-    # TODO: Display even numbers with count
-    # Format: "The following [count] numbers are even:"
-    # Then print each even number on its own line
-
-    # TODO: Display odd numbers with count
-    # Format: "The following [count] numbers are odd:"
-    # Then print each odd number on its own line
-
-
-    # ------------------------------------------
+    # Display odd numbers with count
+    print(f"\nThe following {len(odds)} numbers are odd:")
+    for odd in odds:
+        print(odd, end="\n")
     # CONTINUATION PROMPT
-    # ------------------------------------------
+    user_response = input("\nDo you want to sort another list? (yes/no): ").strip().lower()
+    if user_response == "yes":
+        continue
+    elif user_response == "no":
+        active = False
+    else:
+        print("Invalid response. Please enter 'yes' or 'no'.")
+# EXIT MESSAGE
+print("Thank you for using my Even Odd Number Sorter App! Goodbye!")
+    
 
-    # TODO: Ask user if they want to run program again
 
-    # TODO: Check user response
-    # If they don't want to continue:
-        # TODO: Set active flag to False
-        # TODO: Print goodbye message
-
-
-# ==========================================
-# PROGRAM STRUCTURE NOTES
-# ==========================================
 """
 Key Python concepts used:
 - String methods: .replace() and .split()
